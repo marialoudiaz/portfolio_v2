@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --Titles: 'Syne-Bold';
+  --Corps-de-texte: 'Syne-Regular';
+  --Logo : 'Krona One'
+}
+
+
+
+@font-face {
+  font-family : 'Raleway Regular';
+  src: url('./assets/types/Raleway-Regular.ttf') format('truetype'); 
+}
+@font-face {
+  font-family : 'Karrik-Regular';
+  src: url('./assets/types/Karrik-Regular.ttf') format('truetype'); 
+}
+
+@font-face {
+  font-family : 'Sora-ExtraBold';
+  src: url('./assets/types/Sora-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family : 'Syne-Bold';
+  src: url('./assets/types/Syne-Bold.ttf') format('truetype');
+  font-weight:900; 
+}
+@font-face {
+  font-family : 'Syne-SemiBold';
+  src: url('./assets/types/Syne-SemiBold.ttf') format('truetype');
+  font-weight: lighter; 
+}@font-face {
+  font-family : 'Syne-Regular';
+  src: url('./assets/types/Syne-Regular.ttf') format('truetype');
+  font-weight: lighter; 
+}
+
+
+
+
+
+
+
+/* STYLE GLOBAL*/
+*{
+  margin: 0;
+  padding: 0;
+}
+.scrollable-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* Utilisez une hauteur fixe ou calculez dynamiquement en fonction de votre conception */
+  overflow-y: auto; /* Rend le contenu scrollable en vertical si nécessaire */
+  overflow-x: hidden;
+}
+
+.logo{
+  width: 2rem;
+  height: auto;
+}
+
+.flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+
+
+
+/* HEADER */
+.header-container{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
+  background-color: white;
+  width: 100vw;
+  height: fit-content;
+  z-index: 1000;
+}
+
+.header-container img{
+  width: 15rem;
+  height: fit-content;
+}
+
+
+.left-section {
+  flex: 1;
+  margin-left: 3rem;
+  font-family: var(--Logo);
+  font-size: 2rem;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3rem;
+  font-family: var(--Titles);
+  font-size: 1.2rem;
+}
+
+
+
+/* FOOTER */
+.footer-container{
+  position: sticky;
+  top: 95vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+.footer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .footer{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: .6rem;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+  }
+  .display{
+    display: none;
+  }
+  .logo{
+    width: 1.3rem;
+  }
+}
+
+
+
+
+/* ACCUEIL */
+.scrolling-banner {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  color: black;
+  width: 100vw;
+  font-size: 7rem;
+  border: .6rem solid black;
+}
+
+
+.text-container {
+  display: flex;
+  white-space: nowrap;
+  font-family: var(--Corps-de-texte);
+}
+
+.text {
+  padding: 2rem;
+}
+
+h1{
+  font: var(--Titles);
+  font-size: 8rem;
+  gap: 1rem
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  margin-top: 9rem;
+  gap: .5rem;
+}
+
+.title div:first-child{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+#votre{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  animation: slideInRight 2s ease-in-out;
+  gap: 2rem;
+  margin-right: 5rem;
+}
+// #identite{
+//   align-items: flex-start;
+//   animation: slideInLeft 2s ease-in-out;
+//   margin-left:5rem;
+// }
+
+@keyframes slideInLeft {
+  from {transform: translateX(-100%);}
+  to { transform: translateX(0);}
+}
+@keyframes slideInRight {
+  from {transform: translateX(100%);}
+  to {transform: translateX(0);}
+}
+
+
+.bg-hp{
+  background-image: url("../src/assets/bg2.png");
+  object-fit: cover;
+}
+
+
+
+/* INTRO */
+#displayVideoMobile{
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  #displayVideo {
+    display:none;
+  }
+  #displayVideoMobile{
+    display: block;
+  }
+}
+
+.video{
+  max-width: 100vw;
+  max-height: auto;
+  object-fit:contain;
+}
+
+
+
+/* ROUE */
+.roue{
+  border-radius: 100%;
+  background-color: white;
+}
+.Roue {
+  position: relative;
+  width: 200px; /* Ajustez selon vos besoins */
+  height: 200px; /* Ajustez selon vos besoins */
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+.TexteCurviligne {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px; /* Ajustez selon vos besoins */
+  font-weight: bold; /* Ajustez selon vos besoins */
+  color: white; /* Ajustez selon vos besoins */
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  shape-outside: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  width: 80px; /* Ajustez selon vos besoins */
+  height: 80px; /* Ajustez selon vos besoins */
+  background-color: #007bff; /* Ajustez selon vos besoins */
+  border-radius: 50%; /* Pour rendre le texte circulaire */
+  line-height: 80px; /* Ajustez selon vos besoins pour centrer verticalement le texte */
+  cursor: pointer; /* Pour indiquer que c'est cliquable */
+}
+
+.TexteCurviligne:hover {
+  background-color: #0056b3; /* Change la couleur de fond au survol */
+}
