@@ -1,6 +1,5 @@
 import React from 'react'
 import '../App.scss';
-import video from '../assets/showreel.mp4'
 
 const Magie = () => (
   <>

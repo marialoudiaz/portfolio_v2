@@ -3,6 +3,9 @@ import '../App.scss';
 
 const Projets = () => (
   <>
+  <section id='projets'>
+    
+  </section>
   
   </>
   )
