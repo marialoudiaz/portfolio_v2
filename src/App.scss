@@ -70,6 +70,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  margin: 1rem 0rem 1rem 1rem;
 }
 
 a{
@@ -77,7 +78,19 @@ text-decoration: none;
 color: black;
 }
 
+p{
+  font-family: var(--Corps-de-texte);
+  font-size: 1.5rem;
+}
 
+h1{
+  font-family: var(--Titles);
+  font-size: 5rem;
+  gap: 1rem
+}
+section{
+  margin-top: 5rem;
+}
 
 
 /* HEADER */
@@ -157,11 +170,6 @@ color: black;
 
 
 /* ACCUEIL */
-h1{
-  font: var(--Titles);
-  font-size: 8rem;
-  gap: 1rem
-}
 
 .title{
   margin-top: 9rem;
@@ -267,45 +275,34 @@ opacity: 1;}
 
 
 /* ROUE */
-.roue{
-  border-radius: 100%;
-  background-color: white;
-}
+
 .Roue {
   position: relative;
-  width: 200px; /* Ajustez selon vos besoins */
-  height: 200px; /* Ajustez selon vos besoins */
+  width: 150px; /* Ajustez selon vos besoins */
+  height: 150px; /* Ajustez selon vos besoins */
+  border-radius: 100%;
+  background-color: white;
+  border: 2px solid black;
 }
 
-.logo {
-  width: 100%;
-  height: auto;
+.logo-roue {
+position: relative;
+top: 30%;
+left:25%;
+width: 50%;
+height: auto;
 }
 
 .TexteCurviligne {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 80px;
+  left: 0;
   font-size: 16px; /* Ajustez selon vos besoins */
   font-weight: bold; /* Ajustez selon vos besoins */
-  color: white; /* Ajustez selon vos besoins */
-  text-align: center;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  shape-outside: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);
-  width: 80px; /* Ajustez selon vos besoins */
-  height: 80px; /* Ajustez selon vos besoins */
-  background-color: #007bff; /* Ajustez selon vos besoins */
-  border-radius: 50%; /* Pour rendre le texte circulaire */
-  line-height: 80px; /* Ajustez selon vos besoins pour centrer verticalement le texte */
-  cursor: pointer; /* Pour indiquer que c'est cliquable */
+  color: blue;
+  shape-outside: path('M10,100 Q150,20 290,100'); /* Définit le chemin que le texte doit suivre */
 }
 
-.TexteCurviligne:hover {
-  background-color: #0056b3; /* Change la couleur de fond au survol */
-}
 
 
 .container {
@@ -332,4 +329,178 @@ opacity: 1;}
 
 .text {
   padding: 2rem;
+}
+
+
+//////// PROJETS ////////
+.behance{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Karrik-Regular';
+  font-size: 4rem;
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 1rem;
+  width: fit-content;
+  height: 15vh;
+  margin: auto;
+ 
+
+  & a svg{
+    width: 5rem;
+    height: 5rem;
+    margin-left: 1rem;
+  }
+}
+
+
+.grid-lines div{
+  border: 1px solid black;
+  & p{
+    font-size: 3rem;
+  }
+}
+
+.imageHover{
+  width: 20em;
+  height : auto;
+  z-index: 1000000;
+}
+
+.grid-container-projets{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 50vh, 80vw);
+  // display: flex;
+	overflow-x : scroll; /*permettre le scroll et non le depassement hors de l'écran*/
+	scroll-snap-type : x mandatory;
+
+
+}
+
+.project-wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: repeat(1, 50vw, 70vh);
+  border-radius: 2rem;
+  margin: .5rem;
+}
+
+
+.project-details{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+}
+
+.projectImg{
+width: 70vw;
+height: 75vh;
+margin: .5rem;
+border-radius: 2rem;
+// padding: .5 2 2 .5rem;
+}
+
+.project-description{
+background-color: #272221;
+color: #f6eeea;
+font-family: 'Karrik-Regular';;
+border-radius: 2rem;
+padding: 1rem 2rem 2rem 1rem;
+width: 70vw;
+height: fit-content +.5rem;
+margin: .5rem;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+gap: .5rem
+}
+
+.project-title{
+    grid-column: 1/-1;
+    line-height: .85;
+    font-size: 4rem;
+}
+
+.project-link{
+  border: 2px  solid #f6eeea;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 3rem;
+}
+
+.carousel-btn {
+  display: flex;
+  flex-wrap: nowrap;
+  border-radius: 100%;
+  border: 3px solid black;
+  width:1vw;
+  height: 2vh;
+  margin: .2rem 0rem 0rem .3rem; 
+}
+
+.title-destructured{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:'center';
+  align-items: center;
+}
+
+.bulles{
+  display: flex;
+  flex-wrap: wrap;
+  margin: .5rem
+
+}
+
+.bulles p{
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 1rem;
+  width: fit-content;
+  margin: .2rem 0rem .5rem 1.5rem;
+
+}
+
+/* inspired form gumroad website */
+.behance {
+  // --bg: #000;
+  // --hover-bg: #b9ff90;
+  // --hover-text: #000;
+  background: rgba(255, 255, 255, 0.874);
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.169);
+  border-radius: 100px;
+  padding: 0.8em 2em;
+  transition: 0.2s;
+}
+
+.behance:hover {
+  transform: translate(.5rem, 0.25rem);
+}
+
+.behance:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+.pill{
+  background-color: white;
+  border : 3px solid black;
+  border-radius: 60px;
+  padding: 1rem;
+}
+
+.pill p {
+  font-family: var(--Titles);
 }

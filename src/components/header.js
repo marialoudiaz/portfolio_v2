@@ -8,9 +8,9 @@ const Header = () => (
       <img className='logo' src={Logo} alt='logo'/>
       <div className='right-section'>
         <div className='flex-wrap'>
-        <a href='#services'><p>services</p></a>
-        <a href='#projets'><p>projets</p></a>
-        <a href='#contact'><p>me contacter</p></a>
+        <a href='#services'><p style={{fontFamily:'Syne-Bold', fontSize:'1.5rem'}}>services</p></a>
+        <a href='#projets'><p style={{fontFamily:'Syne-Bold', fontSize:'1.5rem'}}>projets</p></a>
+        <a href='#contact'><p style={{fontFamily:'Syne-Bold', fontSize:'1.5rem'}}>me contacter</p></a>
         </div>
       </div>
  </div>
