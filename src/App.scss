@@ -70,7 +70,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  margin: 1rem 0rem 1rem 1rem;
+  margin: .5rem 0rem 1rem 1rem;
 }
 
 a{
@@ -89,7 +89,7 @@ h1{
   gap: 1rem
 }
 section{
-  margin-top: 5rem;
+  margin: 10rem 0rem 10rem 0rem;
 }
 
 
@@ -504,3 +504,71 @@ gap: .5rem
 .pill p {
   font-family: var(--Titles);
 }
+
+// je realise
+  /////////CIBLE//////////
+  .rolling-btn{
+    background-color: #FFA1F5;
+    width:fit-content;
+    height: auto;
+    padding: .5rem;
+    border: 2px black;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-family: 'Roboto-Regular';
+    transform: rotate(-4deg);
+    z-index: 100;
+    position: absolute;
+    left: 20%;
+    bottom: 75%;
+  }
+  .rolling-categories{
+    background-color: black;
+    width: 100vw;
+    height: auto;
+    color: white;
+    padding: 4rem;
+    margin-bottom:2em;
+  }
+  
+  .scrolling-banner {
+    overflow: hidden;
+    position: relative;
+    top:5%;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    width: 105vw;
+    padding: .8rem;
+    transform: rotate(.99turn);
+    margin-left: -25px;
+  }
+  .scrolling-banner2{
+    overflow: hidden;
+    position: relative;
+    top:20%;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    width: 105vw;
+    padding: .8rem;
+    margin-left: -25px;
+    transform: rotate(0.01turn);
+  }
+  
+  .text-container {
+    display: flex;
+    white-space: nowrap;
+    font-family: 'Karrik-Regular';
+    font-size: 6em;
+  }
+  
+  .text {
+    padding: 0 2rem;
+  }
+  
+  .scrolling-banner:hover{
+    animation: none; // Arrêtez l'animation au survol (facultatif)
+    background-color: violet;
+    color: white;
+  }

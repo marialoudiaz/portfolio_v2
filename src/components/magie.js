@@ -7,6 +7,7 @@ const Magie = () => (
       <source src={video} type='video/mp4'/>
     </video> 
     <p>ajouter texte (effet typewriter)</p> */}
+    
   </>
   )
 
