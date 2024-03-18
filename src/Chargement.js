@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import video from './assets/artisan-codeur.mp4'
+import video from './assets/projets/artisan-codeur.mp4'
 import './App.scss';
 
 

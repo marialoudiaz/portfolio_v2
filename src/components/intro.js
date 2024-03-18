@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../App.scss'
-import videoDesktop from '../assets/intro_ordi.mp4';
-import videoMobile from '../assets/intro_tel.mp4';
+import videoDesktop from '../assets/projets/intro_ordi.mp4';
+import videoMobile from '../assets/projets/intro_tel.mp4';
 
 
 const Intro = () => {

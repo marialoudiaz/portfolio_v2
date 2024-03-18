@@ -3,45 +3,52 @@ import '../App.scss';
 
 function Competences() {
 
- const textsArray = ['autoentrepreneur.se','idéaliste','créatif.ve','rêveur.se','passionné.e']
+ const textsArray = ['autoentrepreneur.ses','idéalistes','créatif.ves','rêveur.ses','passionné.es']
   const [buttonText, setButtonText] = useState(textsArray[0]); // Texte initial du bouton
-  const [index, setIndex] = React.useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const words=['identité de marque','site web', 'application mobile','illustration','typographie'];
 
 
-  const handleMouseEnter =()=>{
-    const currentIndex = textsArray.indexOf(buttonText);
-    const nextIndex = (currentIndex + 1)%textsArray.length;
-    setButtonText(textsArray[nextIndex]);
-  };
 
   useEffect(() => {
-      const containerWidth = document.querySelector('.scrolling-banner').offsetWidth;
-      const textContainer = document.querySelector('.text-container');
-      const textWidth = textContainer.offsetWidth;
+    const containerWidth = document.querySelector('.scrolling-banner').offsetWidth;
+    const textContainer = document.querySelector('.text-container');
+    const textWidth = textContainer.offsetWidth;
 
     const scrollInterval = setInterval(() => {
-      setScrollPosition((prevPosition) =>{
-        const newPosition = prevPosition -1;
-        if (newPosition <= -textWidth){
+      setScrollPosition((prevPosition) => {
+        const newPosition = prevPosition - 1;
+        if (newPosition <= -textWidth) {
           return 0;
         }
         return newPosition;
-    });
-  }, 10);
-  return ()=> clearInterval(scrollInterval);
-}, []);
+      });
+    }, 10);
 
-  const words=['identité de marque','site web', 'application mobile','illustration','typographie'];
+    // Mettre à jour le texte du bouton toutes les 2 secondes
+    const textChangeInterval = setInterval(() => {
+      setButtonText((prevButtonText) => {
+        const currentIndex = textsArray.indexOf(prevButtonText);
+        const nextIndex = (currentIndex + 1) % textsArray.length;
+        return textsArray[nextIndex];
+      });
+    }, 3000);
+
+    return () => {
+      clearInterval(scrollInterval);
+      clearInterval(textChangeInterval);
+    };
+  }, []);
+
+
 
   return (
     <>
       <section>
         <div className='flex-wrap'>
           <div style={{position:'relative'}}>
-          <h1>pour vous</h1>
-          <h1 style={{marginTop:'-1rem'}}>je réalise</h1>
-          <div className='rolling-btn' onMouseEnter={handleMouseEnter}>{buttonText}</div>
+          <h1>pour les</h1>
+          <div className='rolling-btn'>{buttonText}</div>
           <div className="scrolling-banner">
           <div className="text-container" style={{ transform: `translateX(${scrollPosition}px)` }}>
             {words.map((word, index) => (
